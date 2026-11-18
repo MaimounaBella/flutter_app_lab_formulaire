@@ -9,6 +9,8 @@ class Inscription extends StatefulWidget {
 
 class _InscriptionState extends State<Inscription> {
   final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +57,7 @@ class _InscriptionState extends State<Inscription> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   // Traitement du formulaire
-                  print('Formulaire valide');
+                  print('Formulaire valide ${_emailController.text}, ${_passwordController.text}');
                   _formKey.currentState!.reset();
                 }
               },
