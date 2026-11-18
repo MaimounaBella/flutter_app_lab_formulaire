@@ -55,6 +55,8 @@ class _InscriptionState extends State<Inscription> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   // Traitement du formulaire
+                  print('Formulaire valide');
+                  _formKey.currentState!.reset();
                 }
               },
               child: const Text('S\'inscrire'),
