@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Inscription extends StatefulWidget {
-  const new({super.key});
+  const Inscription({super.key});
 
   @override
   State<Inscription> createState() => _InscriptionState();
@@ -10,6 +10,13 @@ class Inscription extends StatefulWidget {
 class _InscriptionState extends State<Inscription> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Inscription'),
+      ),
+      body: const Center(
+    
+      ),
+    );
   }
 }
