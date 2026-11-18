@@ -57,7 +57,9 @@ class _InscriptionState extends State<Inscription> {
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   // Traitement du formulaire
-                  print('Formulaire valide ${_emailController.text}, ${_passwordController.text}');
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('${_emailController.text}Inscription réussie')),
+                  );
                   _formKey.currentState!.reset();
                 }
               },
