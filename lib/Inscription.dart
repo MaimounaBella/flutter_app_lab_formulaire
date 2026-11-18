@@ -26,9 +26,14 @@ class _InscriptionState extends State<Inscription> {
                 hintText: 'Entrez votre email',
               ),
              obscureText: true,
-             validator: (value) {
+           validator: (value) {
+                if (value == null || !value.contains('@')) {
+                  return 'Email invalide';
+                }
 
-            },
+                return null;
+               
+              },
             ),
            
             SizedBox(height: 20),
@@ -40,6 +45,10 @@ class _InscriptionState extends State<Inscription> {
               ),
               obscureText: true,
               validator: (value) {
+                if (value == null || value.length < 8) {
+                  return 'Mot de passe doit contenir au moins 8 caractères';
+                }
+                return null;
               },
             ),
             ElevatedButton(
